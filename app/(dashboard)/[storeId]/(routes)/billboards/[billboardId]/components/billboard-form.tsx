@@ -77,7 +77,7 @@ export const BillboardForm: React.FC<SettingsFormProps> = ({
             setLoading(true);
             await axios.delete(`/api/${params.storeId}/billboards/${params.billboardId}`)
             router.refresh();
-            router.push("/");
+            router.push(`/${params.storeId}/billboards`);
             toast.success("Billboard Deleted")
 
         } catch (error) {
@@ -143,7 +143,7 @@ export const BillboardForm: React.FC<SettingsFormProps> = ({
                     <Button disabled={loading} className="ml-auto" type="submit">{action}</Button>
                 </form>
             </Form>
-            <Separator />
+            {/* <Separator /> */}
 
         </>
     );
