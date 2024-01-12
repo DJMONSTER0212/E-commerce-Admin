@@ -30,7 +30,7 @@ export const CellAction: React.FC<CellActionProps> = ({
             setLoading(true);
             await axios.delete(`/api/${params.storeId}/billboards/${data.id}`)
             router.refresh();
-            // router.push("/");
+            router.push("/");
             toast.success("Billboard Deleted")
 
         } catch (error) {
@@ -47,7 +47,7 @@ export const CellAction: React.FC<CellActionProps> = ({
 
     return (
         <>
-            <AlertModal 
+            <AlertModal
                 isOpen={open}
                 onClose={()=>setOpen(false)}
                 onConfirm={onDelete}

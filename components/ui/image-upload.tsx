@@ -20,7 +20,7 @@ const ImageUpload : React.FC<ImageUploadProps> = ({
     onRemove,
     value
 })=>{
-    
+
     const onUpload = (result : any)=>{
         onChange(result.info.secure_url);
     }
@@ -51,7 +51,7 @@ const ImageUpload : React.FC<ImageUploadProps> = ({
                     </div>
                 ))}
             </div>
-            <CldUploadWidget onUpload={onUpload} uploadPreset="p8blp7q0">
+            <CldUploadWidget onUpload={onUpload} uploadPreset="r78pggoj">
                     {({open})=>{
                         const onClick = ()=>{
                             open();
