@@ -44,7 +44,6 @@ export const BillboardForm: React.FC<SettingsFormProps> = ({
             label: "",
             imageUrl: ""
         }
-
     });
 
     const title = initialData ? "Edit billboard" : "Create Bill Board";

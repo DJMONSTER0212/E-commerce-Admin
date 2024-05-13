@@ -17,7 +17,7 @@ interface StoreSwitcherProps extends PopoverTriggerProps{
 };
 
 export default function StoreSwitcher({
-    className,
+    className ,
     items = []
 }:StoreSwitcherProps){
     const storeModal = useStoreModal();
@@ -45,7 +45,7 @@ export default function StoreSwitcher({
                     {currentStore?.label}
                     <ChevronsUpDown className="ml-auto h-4 w-4 shrink-0 opacity-50"/>
                 </Button>
-            </PopoverTrigger>   
+            </PopoverTrigger>
             <PopoverContent className="w-[200px] p-0">
                 <Command>
                     <CommandList>
@@ -53,7 +53,7 @@ export default function StoreSwitcher({
                         <CommandEmpty>No Store Found.</CommandEmpty>
                         <CommandGroup heading="Stores">
                             {formattedItems.map((store)=>(
-                                <CommandItem 
+                                <CommandItem
                                     key={store.value}
                                     onSelect={()=>onStoreSelect(store)}
                                     className="text-sm"
